@@ -1,0 +1,12 @@
+{
+  "crons": [
+    {
+      "path": "/api/public/job-categories",
+      "schedule": "0 0 * * *"
+    },
+    {
+      "path": "/api/public/job-categories",
+      "schedule": "0 12 * * *"
+    }
+  ]
+}

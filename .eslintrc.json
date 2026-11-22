@@ -1,0 +1,171 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": [
+    "@typescript-eslint",
+    "import",
+    "unused-imports",
+    "tailwindcss",
+    "simple-import-sort"
+  ],
+  "root": true,
+  "env": {
+    "node": true,
+    "jest": true
+  },
+  "ignorePatterns": ["**/*.js"],
+  "rules": {
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "varsIgnorePattern": "^_"
+      }
+    ],
+    "@typescript-eslint/consistent-type-imports": [
+      "error",
+      {
+        "disallowTypeAnnotations": false,
+        "fixStyle": "inline-type-imports",
+        "prefer": "type-imports"
+      }
+    ],
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "internal", "type"],
+        "pathGroups": [
+          {
+            "pattern": "next",
+            "group": "external",
+            "position": "before"
+          },
+          {
+            "pattern": "next*",
+            "group": "external",
+            "position": "before"
+          },
+          {
+            "pattern": "react",
+            "group": "external",
+            "position": "after"
+          },
+          {
+            "pattern": "react*",
+            "group": "external",
+            "position": "after"
+          },
+          {
+            "pattern": "@tanstack/**",
+            "group": "external",
+            "position": "after"
+          },
+          {
+            "pattern": "react-hook-form",
+            "group": "external",
+            "position": "after"
+          },
+          {
+            "pattern": "@hookform/**",
+            "group": "external",
+            "position": "after",
+            "patternOptions": { "matchBase": true }
+          },
+          {
+            "pattern": "react-big-calendar/**",
+            "group": "external",
+            "position": "after"
+          },
+          {
+            "pattern": "@daikimiyauchi/**",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "date-fns/**",
+            "group": "external",
+            "position": "after"
+          },
+          {
+            "pattern": "*",
+            "group": "external",
+            "position": "after"
+          },
+          {
+            "pattern": "@/features/**",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "@/api/**",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "@/components/**",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "@/styles/**",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "@/types/**",
+            "group": "internal",
+            "position": "before"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["builtin"],
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ],
+    "sort-imports": [
+      "error",
+      {
+        "ignoreCase": false,
+        "ignoreDeclarationSort": true,
+        "ignoreMemberSort": false
+      }
+    ],
+    "simple-import-sort/exports": "error",
+    "unused-imports/no-unused-imports": "error",
+    "unused-imports/no-unused-vars": [
+      "warn",
+      {
+        "vars": "all",
+        "varsIgnorePattern": "^_",
+        "args": "after-used",
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "padding-line-between-statements": [
+      "error",
+      { "blankLine": "always", "prev": "*", "next": "if" },
+      { "blankLine": "always", "prev": "if", "next": "*" },
+      { "blankLine": "always", "prev": "*", "next": "case" },
+      { "blankLine": "always", "prev": "*", "next": "break" },
+      { "blankLine": "always", "prev": "*", "next": "return" },
+      { "blankLine": "always", "prev": "*", "next": "throw" },
+      { "blankLine": "always", "prev": "*", "next": "try" },
+      { "blankLine": "always", "prev": "try", "next": "*" }
+    ],
+    "react-hooks/exhaustive-deps": "off",
+    "tailwindcss/classnames-order": "warn"
+  },
+  "settings": {
+    "tailwindcss": {
+      "config": "tailwind.config.js"
+    }
+  }
+}
