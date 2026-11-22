@@ -9,10 +9,10 @@ export const GuestLayout = ({ children }: PropsWithChildren) => {
   useScrollToTop();
 
   return (
-    <div className="relative">
+    <div className="relative flex min-h-screen flex-col">
       <GuestHeader />
 
-      <div className="mt-18 pb-15 min-h-pj pt-10">
+      <div className="mt-18 flex flex-1 flex-col pb-15 pt-10">
         <BasicContainer>
           <main>{children}</main>
         </BasicContainer>

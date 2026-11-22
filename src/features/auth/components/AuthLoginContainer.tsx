@@ -23,7 +23,7 @@ export const AuthLoginContainer = () => {
 
   return (
     <div className="flex justify-center">
-      <div className="bg-pj-white py-30 w-150 h-168 px-30 mx-auto flex flex-col">
+      <div className="bg-pj-white py-30 w-150 px-30 mx-auto flex min-h-168 flex-col">
         <BasicTitle className="text-primary" fontSize="2xl">
           ログイン
         </BasicTitle>

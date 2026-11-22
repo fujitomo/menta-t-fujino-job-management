@@ -2,6 +2,14 @@
 
 Next.js（App Router）と TypeScript で実装したお仕事管理アプリのポートフォリオです。
 
+**フロントエンド実装が中心のデモ**です。お仕事一覧などの画面データは **mock データ** を表示しています（本格的な認証・永続化までは対象外）。
+
+ログイン画面は **未入力のまま「ログイン」を押しても入れます**（認証チェックなしで会員画面へ遷移します）。
+
+## デモ
+
+[https://menta-t-fujino-job-management-1nv75vv50-fujis-projects-4dd5e067.vercel.app/](https://menta-t-fujino-job-management-1nv75vv50-fujis-projects-4dd5e067.vercel.app/)
+
 ![お仕事一覧ページ](./public/images/job-list-page-for-readme.png)
 
 ## 技術スタック
